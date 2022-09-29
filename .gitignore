@@ -60,3 +60,8 @@ crashlytics-build.properties
 
 # Custom settings from project
 /UserSettings
+
+# Remove test scenes / controllers
+/Assets/Scenes/CharlotteScene.unity*
+/Assets/Scripts/CharlotteController.cs*
+/ProjectSettings/SceneTemplateSettings.json
