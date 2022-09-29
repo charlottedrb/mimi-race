@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
 {
     public ItemPreset Preset;
     public MeshRenderer BodyMesh;
+    private bool _hasAlreadyTriggered = false;
     
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,22 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        this.Disapear();
-        this.transform.GetComponent<MeshCollider>().isTrigger = false;
+        if (_hasAlreadyTriggered == false)
+        {
+            _hasAlreadyTriggered = true;
+            this.Disappear();
+            this.transform.GetComponent<MeshCollider>().isTrigger = false;
+            this.SpreadTakeEvent();
+            this.UseBoost();
+        }
     }
 
-    void Rotate()
+    private void SpreadTakeEvent()
+    {
+        GameController.Instance.AddItemTaken(this.Preset.ItemName);
+    }
+
+    private void Rotate()
     {
         float angle = 20;
         float dt = Time.deltaTime;
@@ -35,9 +47,14 @@ public class Item : MonoBehaviour
         this.transform.Rotate(Vector3.up, angle, Space.Self);
     }
 
-    void Disapear()
+    private void Disappear()
     {
         if (this.BodyMesh != null)
             this.BodyMesh.enabled = false;
+    }
+
+    private void UseBoost()
+    {
+        GameController.Instance.SetSpeedWithBoost(this.Preset.ItemBoost);
     }
 }
