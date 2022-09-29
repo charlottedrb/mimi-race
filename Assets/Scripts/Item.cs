@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,14 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemPreset Preset;
+    public MeshRenderer BodyMesh;
+    private bool _hasAlreadyTriggered = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.GetComponent<SpriteRenderer>().sprite = this.Preset.ItemSprite;
+        if (this.BodyMesh != null)
+            this.BodyMesh.material = this.Preset.ItemMaterial;
     }
 
     // Update is called once per frame
@@ -17,17 +21,40 @@ public class Item : MonoBehaviour
     {
         this.Rotate();
     }
-    
-    void Rotate()
+
+    private void OnTriggerEnter(Collider other)
     {
-        float angle = 5;
+        if (_hasAlreadyTriggered == false)
+        {
+            _hasAlreadyTriggered = true;
+            this.Disappear();
+            this.transform.GetComponent<MeshCollider>().isTrigger = false;
+            this.SpreadTakeEvent();
+            this.UseBoost();
+        }
+    }
+
+    private void SpreadTakeEvent()
+    {
+        GameController.Instance.AddItemTaken(this.Preset.ItemName);
+    }
+
+    private void Rotate()
+    {
+        float angle = 20;
         float dt = Time.deltaTime;
         angle *= dt;
         this.transform.Rotate(Vector3.up, angle, Space.Self);
     }
 
-    void Disapear()
+    private void Disappear()
     {
-        this.transform.GetComponent<MeshRenderer>().enabled = false;
+        if (this.BodyMesh != null)
+            this.BodyMesh.enabled = false;
+    }
+
+    private void UseBoost()
+    {
+        GameController.Instance.SetSpeedWithBoost(this.Preset.ItemBoost);
     }
 }
