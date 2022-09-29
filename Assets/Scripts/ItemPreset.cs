@@ -6,11 +6,11 @@ using UnityEngine;
 public class ItemPreset : ScriptableObject
 {
     [Tooltip("The sprite of the item.")]
-    public Sprite ItemSprite;
-    
-    [Tooltip("Is the item a sweet or not ?")]
-    public bool IsItemSweet;
+    public Material ItemMaterial;
 
     [Tooltip("The name of the item.")]
     public string ItemName;
+    
+    [Tooltip("The speed boost that the item gives to the user.")]
+    public int ItemBoost;
 }

@@ -60,3 +60,7 @@ crashlytics-build.properties
 
 # Custom settings from project
 /UserSettings
+
+Assets/Scenes/Test.unity
+Assets/Scenes/Test.unity.meta
+ProjectSettings

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
   m_Name: ChocolatePreset
   m_EditorClassIdentifier: 
-  ItemSprite: {fileID: 0}
-  IsItemSweet: 0
-  ItemName: 
+  ItemMaterial: {fileID: 2100000, guid: f2ef0137dcfa14e04b0c4912fad591e1, type: 2}
+  ItemName: Chocolate
+  ItemBoost: 8
