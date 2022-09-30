@@ -82,6 +82,7 @@ public class GameController : MonoBehaviour
         this.startUI.SetActive(false);
         this.uiPanel.SetActive(true);
         this.OnBeginEvent?.Invoke();
+        AnimationController.Instance.ToggleAnimation("isRunning");
     }
 
     // Show end UI when the game is over.
