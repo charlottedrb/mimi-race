@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: ec0a8becf79164c3c9bb9849d1867a0b, type: 2}
+    - target: {fileID: 6268760539269683312, guid: 4b757351964614c1ba7f1fa477a43191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7236793512601800736, guid: 4b757351964614c1ba7f1fa477a43191, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -65,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 668f81031bc1543858072e96ea874dec, type: 2}
     - target: {fileID: 7236793512601800751, guid: 4b757351964614c1ba7f1fa477a43191, type: 3}
       propertyPath: m_Name
-      value: BroccoliItem Variant
+      value: BroccoliItem
       objectReference: {fileID: 0}
     - target: {fileID: 7415692096347933135, guid: 4b757351964614c1ba7f1fa477a43191, type: 3}
       propertyPath: m_Materials.Array.data[0]
