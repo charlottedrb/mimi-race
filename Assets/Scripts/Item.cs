@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
 {
     public ItemPreset Preset;
     public MeshRenderer BodyMesh;
+    public Light Light;
     private bool _hasAlreadyTriggered = false;
     
     // Start is called before the first frame update
@@ -50,6 +51,8 @@ public class Item : MonoBehaviour
     {
         if (this.BodyMesh != null)
             this.BodyMesh.enabled = false;
+        if (this.Light != null)
+            this.Light.enabled = false;
     }
 
     private void UseBoost()
