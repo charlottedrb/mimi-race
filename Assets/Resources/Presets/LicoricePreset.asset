@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
-  m_Name: DonutPreset
+  m_Name: LicoricePreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: 9f5574cff2b1d48fc97d93d17a76607a, type: 2}
-  ItemName: Donut
-  ItemBoost: 0.2
+  ItemMaterial: {fileID: 2100000, guid: 5e9cb7884189e4e5381fdccda8e2bfee, type: 2}
+  ItemName: Licorice
+  ItemBoost: 0.4

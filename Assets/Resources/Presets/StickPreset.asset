@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
-  m_Name: CupcakePreset
+  m_Name: StickPreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: 5e9cb7884189e4e5381fdccda8e2bfee, type: 2}
-  ItemName: Cupcake
-  ItemBoost: 1
+  ItemMaterial: {fileID: 2100000, guid: 566d921c071c54919b0a55dffa3a14b4, type: 2}
+  ItemName: Stick
+  ItemBoost: 0.7
