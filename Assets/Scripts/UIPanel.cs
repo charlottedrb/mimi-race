@@ -17,7 +17,7 @@ public class UIPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameController.Instance.OnNewItemCollected += ShowItem;
+        GameController.Instance.OnNewItemCollected += ChangeItemAlpha;
     }
 
     // Update is called once per frame
@@ -26,7 +26,8 @@ public class UIPanel : MonoBehaviour
         
     }
 
-    public void ShowItem(string itemName)
+    // Change the alpha of collected item's image.
+    private void ChangeItemAlpha(string itemName)
     {
         foreach (var icon in icons)
         {
