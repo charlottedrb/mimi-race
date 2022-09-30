@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemMaterial: {fileID: 2100000, guid: f2ef0137dcfa14e04b0c4912fad591e1, type: 2}
   ItemName: Chocolate
-  ItemBoost: 8
+  ItemBoost: 0.2

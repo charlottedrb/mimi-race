@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3810363287212129636}
   - component: {fileID: 5309009172753073685}
   - component: {fileID: 7415692096347933135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7236793512601800736}
   - component: {fileID: 7236793512601800749}
   - component: {fileID: 7236793512601800748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GenericItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,5 +143,5 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

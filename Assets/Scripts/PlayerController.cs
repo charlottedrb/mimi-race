@@ -16,11 +16,11 @@ public class PlayerController : MonoBehaviour
         private set => _instance = value;
     }
 
-    private int _finalPosition = 80;
+    private int _finalPosition = 70;
     private int _jumpPosition = 3;
     
-    [Tooltip("Speed of the character.")]
-    public float speed = 10;
+    // [Tooltip("Speed of the character.")]
+    // public float speed = 10;
 
     [Tooltip("Character to move.")]
     public GameObject character; 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(this.character.transform.localPosition.z < this._finalPosition)
-            this.character.transform.localPosition += new Vector3(0, 0, this.speed * 0.1f);
+            this.character.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * 0.1f);
     }
 
     public void Jump()

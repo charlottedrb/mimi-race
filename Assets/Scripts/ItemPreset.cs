@@ -12,5 +12,5 @@ public class ItemPreset : ScriptableObject
     public string ItemName;
     
     [Tooltip("The speed boost that the item gives to the user.")]
-    public int ItemBoost;
+    public float ItemBoost;
 }
