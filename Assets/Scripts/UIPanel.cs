@@ -18,12 +18,9 @@ public class UIPanel : MonoBehaviour
     // Change the alpha of collected item's image.
     private void ChangeItemAlpha(string itemName)
     {
+        // Foreach icons, we change the opacity.
         foreach (var icon in icons)
-        {
             if (icon.gameObject.name == itemName)
-            {
                 icon.color = Color.white;
-            }
-        }
     }
 }

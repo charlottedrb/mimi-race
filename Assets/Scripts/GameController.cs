@@ -111,5 +111,6 @@ public class GameController : MonoBehaviour
             this.OnCheckResultEvent?.Invoke(true);
         
         this.endUI.SetActive(true);
+        this.uiPanel.SetActive(false);
     }
 }
