@@ -6,6 +6,8 @@ public class GameController : MonoBehaviour
 {
     public delegate void SpeedEvent(float newSpeed);
     public event SpeedEvent OnSpeedChange;
+    public delegate void NewItemEvent(string itemName);
+    public event NewItemEvent OnNewItemCollected;
     
     private static GameController _instance;
     public static GameController Instance
@@ -59,5 +61,6 @@ public class GameController : MonoBehaviour
         _itemsTakenList.Add(itemName);
         // Debug.Log("LIST : " + _itemsTakenList);
         Debug.Log("One more to the list");
+        this.OnNewItemCollected.Invoke(itemName);
     }
 }
