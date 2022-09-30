@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    private static CharacterController _instance = null;
-    public static CharacterController Instance
+    private static PlayerController _instance = null;
+    public static PlayerController Instance
     {
         get
         {
             if (_instance == null)
-                _instance = FindObjectOfType<CharacterController>();
+                _instance = FindObjectOfType<PlayerController>();
             return _instance;
         }
         private set => _instance = value;
     }
 
-    private int _finalPosition = 70;
+    private int _finalPosition = 80;
     private int _jumpPosition = 3;
     
     [Tooltip("Speed of the character.")]
