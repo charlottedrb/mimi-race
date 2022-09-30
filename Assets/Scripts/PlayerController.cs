@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         private set => _instance = value;
     }
 
-    private int _finalPosition = 70;
+    private int _finalPosition = 195;
     private int _jumpPosition = 3;
     
     // [Tooltip("Speed of the character.")]

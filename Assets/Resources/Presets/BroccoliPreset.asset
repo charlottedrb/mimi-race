@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
   m_Name: BroccoliPreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: eb6c224b940f04a3c816c51689248249, type: 2}
   ItemName: Broccoli
   ItemBoost: -0.2

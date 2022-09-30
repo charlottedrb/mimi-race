@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
   m_Name: LicoricePreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: 5e9cb7884189e4e5381fdccda8e2bfee, type: 2}
   ItemName: Licorice
-  ItemBoost: 0.4
+  ItemBoost: 0.3

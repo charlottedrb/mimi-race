@@ -12,8 +12,7 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (this.BodyMesh != null)
-            this.BodyMesh.material = this.Preset.ItemMaterial;
+        
     }
 
     // Update is called once per frame
