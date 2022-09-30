@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject startUI;
+    public GameObject endUI;
+    public GameObject uiPanel;
     public delegate void SpeedEvent(float newSpeed);
     public event SpeedEvent OnSpeedChange;
     public delegate void NewItemEvent(string itemName);
     public event NewItemEvent OnNewItemCollected;
+    public delegate void BeginEvent();
+    public event BeginEvent OnBeginEvent;
     
     private static GameController _instance;
     public static GameController Instance
@@ -42,7 +47,13 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set UI 
+        this.startUI.SetActive(true);
+        this.endUI.SetActive(false);
+        this.uiPanel.SetActive(false);
         
+        // Event Listeners
+        InputController.Instance.OnStartEvent += SetGameStart;
     }
 
     // Update is called once per frame
@@ -63,5 +74,19 @@ public class GameController : MonoBehaviour
         Debug.Log("One more to the list");
         if (this.OnNewItemCollected != null)
             this.OnNewItemCollected.Invoke(itemName);
+    }
+    
+    // Set UI on game start.
+    private void SetGameStart()
+    {
+        this.startUI.SetActive(false);
+        this.uiPanel.SetActive(true);
+        this.OnBeginEvent?.Invoke();
+    }
+
+    // Show end UI when the game is over.
+    private void ShowEndScreen()
+    {
+        this.endUI.SetActive(true);
     }
 }

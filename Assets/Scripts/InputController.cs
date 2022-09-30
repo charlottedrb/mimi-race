@@ -18,7 +18,10 @@ public class InputController : MonoBehaviour
     
     public delegate void JumpEvent();
     
-    public event JumpEvent onJumpEvent;
+    public event JumpEvent OnJumpEvent;
+    public delegate void StartEvent();
+    
+    public event StartEvent OnStartEvent;
     
     // Start is called before the first frame update
     void Start()
@@ -30,8 +33,9 @@ public class InputController : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {
-            this.onJumpEvent?.Invoke();
-        }
+            this.OnJumpEvent?.Invoke();
+
+        if (Input.GetKeyDown(KeyCode.Return))
+            this.OnStartEvent?.Invoke();
     }
 }

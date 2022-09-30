@@ -7,9 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302798412866834366, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 302798412866834366, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 302798412866834366, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 302798412866834366, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 302798412866834366, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5333824384436653862, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
       propertyPath: m_Name
-      value: EndUI Variant
+      value: EndUI
       objectReference: {fileID: 0}
     - target: {fileID: 5333824384436653866, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
       propertyPath: m_Pivot.x
@@ -149,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5333824385874922826, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}

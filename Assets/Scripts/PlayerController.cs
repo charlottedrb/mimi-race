@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private static PlayerController _instance = null;
+    private bool _isBegan = false;
     public static PlayerController Instance
     {
         get
@@ -22,14 +23,16 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InputController.Instance.onJumpEvent += Jump;
+        InputController.Instance.OnJumpEvent += Jump;
+        GameController.Instance.OnBeginEvent += () => _isBegan = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(this.transform.localPosition.z < this._finalPosition)
-            this.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * 0.1f);
+        if(_isBegan)
+            if(this.transform.localPosition.z < this._finalPosition)
+                this.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * 0.1f);
     }
 
     public void Jump()
