@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     private static PlayerController _instance = null;
     // Has the game started
     private bool _isBegan = false;
+    private bool _isFinished = false;
+    public delegate void EndEvent();
+    public event EndEvent OnGameEnd;
     public static PlayerController Instance
     {
         get
@@ -40,6 +43,15 @@ public class PlayerController : MonoBehaviour
             if(this.transform.localPosition.z < this._finalPosition)
                 // The player moves forward
                 this.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * dt);
+        
+        if(!_isFinished)
+            if (this.transform.localPosition.z >= this._finalPosition)
+            {
+                this.OnGameEnd?.Invoke();
+                _isFinished = true;
+            }
+                
+            
         
         // We prevent the character from having side effects when jumping (losing right direction or rotation)
         this.transform.localPosition = new Vector3(0, this.transform.localPosition.y, this.transform.localPosition.z);

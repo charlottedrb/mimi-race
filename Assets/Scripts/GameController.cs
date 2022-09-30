@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public event NewItemEvent OnNewItemCollected;
     public delegate void BeginEvent();
     public event BeginEvent OnBeginEvent;
+    public delegate void CheckResultEvent(bool isWon);
+    public event CheckResultEvent OnCheckResultEvent;
     
     private static GameController _instance;
     public static GameController Instance
@@ -38,7 +40,6 @@ public class GameController : MonoBehaviour
             if (this.OnSpeedChange != null && value != this._speed)
                 this.OnSpeedChange.Invoke(value);
             _speed = value;
-            Debug.Log("new speed : " + value);
         }
     }
     // List of taken items
@@ -54,6 +55,7 @@ public class GameController : MonoBehaviour
         
         // Event Listeners
         InputController.Instance.OnStartEvent += SetGameStart;
+        PlayerController.Instance.OnGameEnd += SetGameEnd;
     }
 
     // Add boost from item to global speed
@@ -66,6 +68,7 @@ public class GameController : MonoBehaviour
     public void AddItemTaken(string itemName)
     {
         _itemsTakenList.Add(itemName);
+        Debug.Log(itemName);
         if (this.OnNewItemCollected != null)
             this.OnNewItemCollected.Invoke(itemName);
     }
@@ -79,9 +82,23 @@ public class GameController : MonoBehaviour
         AnimationController.Instance.ToggleAnimation("isRunning");
     }
 
-    // Show end UI when the game is over.
-    private void ShowEndScreen()
+    // Set UI on game over.
+    private void SetGameEnd()
     {
+        this.CheckResult();
+        AnimationController.Instance.ToggleAnimation("isRunning");
+    }
+
+    // Check if the player wins or loose.
+    private void CheckResult()
+    {
+        if (_itemsTakenList.Contains("Broccoli") ||
+            _itemsTakenList.Contains("Mushroom") ||
+            _itemsTakenList.Count < 5)
+            this.OnCheckResultEvent?.Invoke(false);
+        else 
+            this.OnCheckResultEvent?.Invoke(true);
+        
         this.endUI.SetActive(true);
     }
 }

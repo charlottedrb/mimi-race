@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5333824385874922826, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
       propertyPath: m_text
-      value: "Collected all the candies ! \nAnd avoid bad vegetables :("
+      value: "Collect all the candies ! \nAnd avoid bad vegetables :("
       objectReference: {fileID: 0}
     - target: {fileID: 5333824385874922826, guid: 8cc9c204acdbd401eab613e61df2da52, type: 3}
       propertyPath: m_fontSize
