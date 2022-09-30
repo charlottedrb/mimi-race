@@ -62,7 +62,9 @@ public class PlayerController : MonoBehaviour
     {
         // If the player is not currently jumping two times in a row
         if (this.transform.localPosition.y < 3.5f && this.transform.localPosition.y > 0f)
+        {
             // He jumps
             this.transform.localPosition += new Vector3(0, this.transform.localPosition.y + _jumpPosition , 0);
+        }
     }
 }
