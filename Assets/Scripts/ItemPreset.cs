@@ -5,9 +5,6 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class ItemPreset : ScriptableObject
 {
-    [Tooltip("The sprite of the item.")]
-    public Material ItemMaterial;
-
     [Tooltip("The name of the item.")]
     public string ItemName;
     
