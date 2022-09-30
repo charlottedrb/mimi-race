@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BroccoliPreset
   m_EditorClassIdentifier: 
   ItemName: Broccoli
-  ItemBoost: -0.2
+  ItemBoost: -3

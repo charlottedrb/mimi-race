@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MarshmallowPreset
   m_EditorClassIdentifier: 
   ItemName: Marshmallow
-  ItemBoost: 0.4
+  ItemBoost: 6

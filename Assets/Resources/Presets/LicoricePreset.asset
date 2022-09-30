@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LicoricePreset
   m_EditorClassIdentifier: 
   ItemName: Licorice
-  ItemBoost: 0.3
+  ItemBoost: 7

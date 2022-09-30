@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private float _speed = 0.1f;
+    private float _speed = 4f;
     public float Speed
     {
         get => _speed;
@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
             Debug.Log("new speed : " + value);
         }
     }
-    
+    // List of taken items
     List<string> _itemsTakenList = new List<string>();
 
     // Start is called before the first frame update
@@ -56,22 +56,16 @@ public class GameController : MonoBehaviour
         InputController.Instance.OnStartEvent += SetGameStart;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Add boost from item to global speed
     public void SetSpeedWithBoost(float boost)
     {
         this.Speed += boost;
     }
     
+    // Add taken item to the list
     public void AddItemTaken(string itemName)
     {
         _itemsTakenList.Add(itemName);
-        // Debug.Log("LIST : " + _itemsTakenList);
-        Debug.Log("One more to the list");
         if (this.OnNewItemCollected != null)
             this.OnNewItemCollected.Invoke(itemName);
     }
