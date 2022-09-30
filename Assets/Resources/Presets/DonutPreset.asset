@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: DonutPreset
   m_EditorClassIdentifier: 
   ItemMaterial: {fileID: 2100000, guid: 9f5574cff2b1d48fc97d93d17a76607a, type: 2}
-  IsItemSweet: 1
   ItemName: Donut
-  ItemBoost: 5
+  ItemBoost: 0.2

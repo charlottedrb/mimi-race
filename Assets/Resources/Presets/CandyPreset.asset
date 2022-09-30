@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: CandyPreset
   m_EditorClassIdentifier: 
   ItemMaterial: {fileID: 2100000, guid: 812c08ff1bbdb4648a86516cdf5e2664, type: 2}
-  IsItemSweet: 1
   ItemName: Candy
-  ItemBoost: 10
+  ItemBoost: 1
