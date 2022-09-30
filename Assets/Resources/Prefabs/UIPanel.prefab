@@ -212,6 +212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55880ed9106aa438cb165f42e12cbc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icons:
+  - {fileID: 6015161280100417481}
+  - {fileID: 6015161281911989602}
+  - {fileID: 6015161280989523426}
+  - {fileID: 6015161281854401666}
+  - {fileID: 6015161281607615353}
 --- !u!1 &6015161280989523424
 GameObject:
   m_ObjectHideFlags: 0
