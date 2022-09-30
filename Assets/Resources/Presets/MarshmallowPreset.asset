@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
   m_Name: MarshmallowPreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: 9f5574cff2b1d48fc97d93d17a76607a, type: 2}
   ItemName: Marshmallow
-  ItemBoost: 0.6
+  ItemBoost: 0.4

@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
   m_Name: MushroomPreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: ae14932cec8ca4b33b4b52256113e6ec, type: 2}
   ItemName: Mushroom
-  ItemBoost: -1
+  ItemBoost: -0.2

@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944af460b8b24ba784be9d7170c8afb, type: 3}
   m_Name: StickPreset
   m_EditorClassIdentifier: 
-  ItemMaterial: {fileID: 2100000, guid: 566d921c071c54919b0a55dffa3a14b4, type: 2}
   ItemName: Stick
-  ItemBoost: 0.7
+  ItemBoost: 0.5
