@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [Tooltip("UI view at the beginning of the game.")]
     public GameObject startUI;
+    [Tooltip("UI view at the ending of the game.")]
     public GameObject endUI;
+    [Tooltip("UI toolbar at left of the screen.")]
     public GameObject uiPanel;
     public delegate void SpeedEvent(float newSpeed);
     public event SpeedEvent OnSpeedChange;
@@ -37,8 +40,8 @@ public class GameController : MonoBehaviour
         get => _speed;
         set
         {
-            if (this.OnSpeedChange != null && value != this._speed)
-                this.OnSpeedChange.Invoke(value);
+            if (value != this._speed)
+                this.OnSpeedChange?.Invoke(value);
             _speed = value;
         }
     }
@@ -68,24 +71,32 @@ public class GameController : MonoBehaviour
     public void AddItemTaken(string itemName)
     {
         _itemsTakenList.Add(itemName);
-        Debug.Log(itemName);
-        if (this.OnNewItemCollected != null)
-            this.OnNewItemCollected.Invoke(itemName);
+        
+        // Send event to UIPanel to update our inventory.
+        this.OnNewItemCollected?.Invoke(itemName);
     }
     
     // Set UI on game start.
     private void SetGameStart()
     {
+        // Show/hide UI views. 
         this.startUI.SetActive(false);
         this.uiPanel.SetActive(true);
+        
+        // Send event to PlayerController to launch the movement.
         this.OnBeginEvent?.Invoke();
+        
+        // Start running animation.
         AnimationController.Instance.ToggleAnimation("isRunning");
     }
 
     // Set UI on game over.
     private void SetGameEnd()
     {
+        // Checking the result to see what we are going to show.
         this.CheckResult();
+        
+        // Stopping the running animation.
         AnimationController.Instance.ToggleAnimation("isRunning");
     }
 

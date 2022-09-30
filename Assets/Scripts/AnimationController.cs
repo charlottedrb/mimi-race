@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
+    [Tooltip("Animator which concern Froggy.")]
     public Animator froggyAnimator;
     private static AnimationController _instance;
     public static AnimationController Instance
@@ -23,6 +24,7 @@ public class AnimationController : MonoBehaviour
     // Change the value of the animation.
     public void ToggleAnimation(string animationName)
     {
+        // Change bool value of the concerned animation.
         froggyAnimator.SetBool(animationName, !froggyAnimator.GetBool(animationName));
     }
 }

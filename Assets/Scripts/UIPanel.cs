@@ -6,24 +6,13 @@ using UnityEngine.UI;
 
 public class UIPanel : MonoBehaviour
 {
-    private Image _candySprite;
-    private Image _chocolateSprite;
-    private Image _licoriceSprite;
-    private Image _marshmallowSprite;
-    private Image _stickSprite;
-
+    [Tooltip("Array of images which contains the icons in the toolbar.")]
     public Image[] icons;
     
     // Start is called before the first frame update
     void Start()
     {
         GameController.Instance.OnNewItemCollected += ChangeItemAlpha;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // Change the alpha of collected item's image.

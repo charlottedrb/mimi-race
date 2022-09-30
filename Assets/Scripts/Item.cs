@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [Tooltip("Preset which concern the current item.")]
     public ItemPreset Preset;
+    [Tooltip("Body mesh for the item.")]
     public MeshRenderer BodyMesh;
+    [Tooltip("Point light under the item.")]
     public Light Light;
     // Has the item already been touched
     private bool _hasAlreadyTriggered = false;
@@ -17,6 +20,7 @@ public class Item : MonoBehaviour
         this.Rotate();
     }
 
+    // When the player hits the item.
     private void OnTriggerEnter(Collider other)
     {
         // If the item hasn't been touched already

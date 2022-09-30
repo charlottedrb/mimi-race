@@ -20,15 +20,10 @@ public class GenericUI : MonoBehaviour
         GameController.Instance.OnCheckResultEvent += ShowResult;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Show if the labels "Winner" or "Looser".
     void ShowResult(bool isWon)
     {
+        // If the player won the game
         if (isWon)
         {
             this.winnerLabel.SetActive(true);

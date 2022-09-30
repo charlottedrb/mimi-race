@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private static PlayerController _instance = null;
     // Has the game started
     private bool _isBegan = false;
+    
+    // Has the game finished.
     private bool _isFinished = false;
     public delegate void EndEvent();
     public event EndEvent OnGameEnd;
+    
+    private static PlayerController _instance = null;
     public static PlayerController Instance
     {
         get
