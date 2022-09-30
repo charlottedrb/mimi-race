@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
         _itemsTakenList.Add(itemName);
         // Debug.Log("LIST : " + _itemsTakenList);
         Debug.Log("One more to the list");
-        this.OnNewItemCollected.Invoke(itemName);
+        if (this.OnNewItemCollected != null)
+            this.OnNewItemCollected.Invoke(itemName);
     }
 }

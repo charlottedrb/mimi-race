@@ -18,12 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private int _finalPosition = 195;
     private int _jumpPosition = 3;
-    
-    // [Tooltip("Speed of the character.")]
-    // public float speed = 10;
 
-    [Tooltip("Character to move.")]
-    public GameObject character; 
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +28,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.character.transform.localPosition.z < this._finalPosition)
-            this.character.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * 0.1f);
+        if(this.transform.localPosition.z < this._finalPosition)
+            this.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * 0.1f);
     }
 
     public void Jump()
     {
-        this.character.transform.localPosition += new Vector3(0, this.character.transform.localPosition.y + _jumpPosition , 0);
-            
+        if (this.transform.localPosition.y < 3.5f && this.transform.localPosition.y > 0f)
+            this.transform.localPosition += new Vector3(0, this.transform.localPosition.y + _jumpPosition , 0);
     }
 }
