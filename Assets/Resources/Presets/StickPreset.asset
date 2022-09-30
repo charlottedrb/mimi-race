@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StickPreset
   m_EditorClassIdentifier: 
   ItemName: Stick
-  ItemBoost: 0.5
+  ItemBoost: 9

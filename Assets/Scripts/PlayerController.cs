@@ -30,9 +30,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float dt = Time.deltaTime;
         if(_isBegan)
             if(this.transform.localPosition.z < this._finalPosition)
-                this.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * 0.1f);
+                this.transform.localPosition += new Vector3(0, 0, GameController.Instance.Speed * dt);
         this.transform.localPosition = new Vector3(0, this.transform.localPosition.y, this.transform.localPosition.z);
         this.transform.localRotation = new Quaternion(0, 0, 0, 0);
     }

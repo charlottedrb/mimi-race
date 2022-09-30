@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MushroomPreset
   m_EditorClassIdentifier: 
   ItemName: Mushroom
-  ItemBoost: -0.2
+  ItemBoost: -3

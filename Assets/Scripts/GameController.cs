@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private float _speed = 0.1f;
+    private float _speed = 4f;
     public float Speed
     {
         get => _speed;

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ChocolatePreset
   m_EditorClassIdentifier: 
   ItemName: Chocolate
-  ItemBoost: 0.1
+  ItemBoost: 6
